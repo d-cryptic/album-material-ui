@@ -4,6 +4,12 @@
 
 ### The images are 'unsplash random images'
 
+
+#### Live Demo: https://album-material-ui.vercel.app/
+
+#### Demo GIF:
+![Screen recoring gif](./screenrecording.gif)
+
 ## How to use the repo and initiate the project
 
 1. Clone the repo
