@@ -16,15 +16,8 @@ import {
 } from "@material-ui/core";
 import { PhotoCamera } from "@material-ui/icons";
 
-// for styling
-import { makeStyles } from "@material-ui/core/styles";
-
-const useStyles = makeStyles((theme) => ({
-  container: {
-    backgroundColor: theme.palette.background.paper,
-    padding: theme.spacing(8, 0, 6),
-  },
-}));
+// styling import from styles.js
+import useStyles from "./styles";
 
 const App = () => {
   const classes = useStyles();
@@ -33,7 +26,7 @@ const App = () => {
       <CssBaseline />
       <AppBar position="relative">
         <Toolbar>
-          <PhotoCamera />
+          <PhotoCamera className={classes.icon} />
           <Typography variant="h6">Photo Album</Typography>
         </Toolbar>
       </AppBar>
@@ -56,12 +49,14 @@ const App = () => {
               sentence as long as possible so we can see how does it look like
               on the screen.
             </Typography>
-            <div>
+            <div className={classes.buttons}>
               <Grid container spacing={2} justify="center">
                 <Grid item>
                   <Button variant="contained" color="primary">
                     See my photos
                   </Button>
+                </Grid>
+                <Grid item>
                   <Button variant="outlined" color="primary">
                     Secondary action
                   </Button>
@@ -70,6 +65,20 @@ const App = () => {
             </div>
           </Container>
         </div>
+        <Container className={classes.cardGrid} maxWidth="md">
+          <Grid container spacing={4}>
+            <Grid item>
+              <Card className={classes.card}>
+                <CardMedia
+                  className={classes.cardMedia}
+                  image="https://source.unsplash.com/random"
+                  title="Image title"
+                />
+                <CardContent className={classes.cardContent}></CardContent>
+              </Card>
+            </Grid>
+          </Grid>
+        </Container>
       </main>
     </>
   );
