@@ -11,7 +11,6 @@
 3. Run `npm install`
 4. Run `npm start`
 
-<hr>
 - Feel free to add more features by raising an issue.
 - Give a star to the project
 - Follow me on github [Barun Debnath](https://github.com/d-cryptic)
