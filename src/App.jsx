@@ -9,11 +9,15 @@ import {
   CardContent,
   CardMedia,
   CssBaseline,
+  Button,
   Grid,
   Toolbar,
   Container,
 } from "@material-ui/core";
 import { PhotoCamera } from "@material-ui/icons";
+
+// for styling
+import 
 
 const App = () => {
   return (
@@ -27,7 +31,7 @@ const App = () => {
       </AppBar>
       <main>
         <div>
-          <Container maxWidth="sm">
+          <Container maxWidth="sm" >
             <Typography
               variant="h2"
               align="center"
@@ -45,7 +49,16 @@ const App = () => {
               on the screen.
             </Typography>
             <div>
-              <Grid container spacing={2}></Grid>
+              <Grid container spacing={2} justify="center">
+                <Grid item>
+                  <Button variant="contained" color="primary">
+                    See my photos
+                  </Button>
+                  <Button variant="outlined" color="primary">
+                    Secondary action
+                  </Button>
+                </Grid>
+              </Grid>
             </div>
           </Container>
         </div>
